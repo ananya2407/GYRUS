@@ -44,4 +44,4 @@ replace `python3` with `py -3`
 ### Team Members
 1. -[@soumyadeeptadas](https://github.com/soumyadeeptadas)
 2. -[@ananya2407](https://github.com/ananya2407)
-3. -[@Sid200026](https://github.com/Sid200026)
+
