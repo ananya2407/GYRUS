@@ -1,0 +1,68 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+      <link rel="stylesheet" href="{% static 'loginsignup/update.css' %}">
+  <title>Gyrus: Minds advancing Medicine</title>
+
+</head>
+
+<body>
+<div class="container">
+<div class="iam">
+  <div>
+    <a href={% url 'loginsignup:dashboard'%}> <button class="design" type = "button">Dashboard</button></a>
+  </div>
+  <div class="centreme">
+    <h1> Update Tumor Characteristics </h1>
+  </div>
+  <div class="centreme">
+    <h3> Note : Enter the values according to reports </h3>
+  </div>
+  <div class="centreme">
+    {% if error %}
+      <h2 class="danger">{{error}}</h2>
+    {% endif %}
+  </div>
+</div>
+  <form method="POST">
+  {% csrf_token %}
+    <label for="fname">Clump Thickness</label>
+    <input required type="text" id="fname" name="clumpThickness" placeholder="Enter Clump Thickness value...">
+
+    <label for="fname">Uniformity of Cell Size</label>
+    <input required type="text" id="fname" name="uniformityCellSize" placeholder="Enter Uniformity of Cell Size value...">
+
+    <label for="fname">Uniformity of Cell Shape</label>
+    <input required type="text" id="fname" name="uniformityCellShape" placeholder="Enter Uniformity of Cell Shape value...">
+
+    <label for="fname">Marginal Adhesion</label>
+    <input required type="text" id="fname" name="marginalAdhesion" placeholder="Enter Marginal Adhesion value...">
+
+    <label for="fname">Single Epithelial Cell Size</label>
+    <input required type="text" id="fname" name="singleEpithelialCellSize" placeholder="Enter Single Epithelial Cell Size value...">
+
+    <label for="fname">Bare Nuclei</label>
+    <input required type="text" id="fname" name="bareNuclei" placeholder="Enter Bare Nuclei value...">
+
+    <label for="fname">Bland Chromatin </label>
+    <input required type="text" id="fname" name="blandChromatin" placeholder="Enter Bland Chromatin value...">
+
+    <label for="fname">Normal Nucleoli</label>
+    <input required type="text" id="fname" name="normalNucleoli" placeholder="Enter Normal Nucleoli value...">
+
+    <label for="fname">Mitoses</label>
+    <input required type="text" id="fname" name="mitoses" placeholder="Enter Mitoses value...">
+
+
+    <input type="hidden" readOnly value = "1" name="test"/>
+    <input type="hidden" readOnly value = {{empUser}} name="usname"/>
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+</body>
+
+</html>

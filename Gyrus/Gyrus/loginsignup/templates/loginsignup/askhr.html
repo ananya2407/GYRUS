@@ -1,0 +1,43 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'loginsignup/login.css' %}">
+    <link rel="stylesheet" href="{% static 'loginsignup/index.css' %}">
+    <link rel="stylesheet" href="{% static 'loginsignup/tasks.css' %}">
+  <title>Gyrus: Minds advancing Medicine</title>
+
+</head>
+
+<div id="st-navbar-desktop-wrapper" class="st-navbar-desktop-wrapper st-navbar-desktop-fixed">
+        <div class="st-navbar-desktop">
+          <div class="container">
+            <div class="st-navbar-desktop-logo">
+              <a class="st-navbar-desktop-logo-link" title="Logo" href=""><img src="{%static 'logo2.jpg' %}"></a>
+            </div>
+            <nav class="st-navbar-desktop-menu" role="navigation">
+              <ul id="st-navbar-desktop-menu-nav" class="sf-menu">
+            <li><a href={% url 'loginsignup:dashboard' %}>Dashboard</a></li>
+            <li><a href="{% url 'loginsignup:update' %}">Update Profile</a></li>
+            <li><a href="{% url 'loginsignup:task' %}">Appointments</a></li>
+            <li><a href={% url 'loginsignup:contact' %}>Contact Doctor</a></li>
+            <li><a href={% url 'loginsignup:chat' %}>Chat</a></li>
+            <li><a href={% url 'loginsignup:logout' %}>Logout</a></li>
+            <li><a href=""></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+
+<body class="align">
+
+<div>
+<h2 class="yolo">Ask the Doctor to modify details</h2>
+</div>
+
+</body>
+
+</html>
