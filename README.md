@@ -1,5 +1,5 @@
 # GYRUS
-Project by team # Nyx 
+Project by team Nyx 
 
 # Gyrus: An app for Doctors and Patients
 
